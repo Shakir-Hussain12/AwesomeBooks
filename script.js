@@ -5,10 +5,12 @@ const book = document.querySelector('#content');
 const data = JSON.parse(localStorage.getItem('bookData')) || [];
 
 class NewBook {
-  addItem = (name, author) => {
-    if (name && author) {
+  addItem = (title, author) => {
+    const id = new Date();
+    if (title && author) {
       const item = {
-        name,
+        id: Date.now(),
+        title,
         author,
       };
       data.push(item);
@@ -41,13 +43,21 @@ section.className = 'books_container';
 const h1 = document.createElement('h1');
 h1.innerText = 'All awesome books';
 h1.className = 'books_header';
-book.appendChild(h1);
+if (data.length > 0) {
+  book.appendChild(h1);
+}
 data.forEach((item) => {
   const div = document.createElement('div');
   div.className = 'book_item';
   const h2 = document.createElement('h1');
   h2.className = 'book_description';
-  h2.innerText = `${item.author} by ${item.name}`;
+  h2.innerText = `${item.title.charAt(0).toUpperCase()}${item.title
+    .split('')
+    .splice(1)
+    .join('')} by ${item.author.charAt(0).toUpperCase()}${item.author
+    .split('')
+    .splice(1)
+    .join('')}`;
   const button = book.appendChild(document.createElement('button'));
   button.innerText = 'Remove';
   button.className = 'book_button';
