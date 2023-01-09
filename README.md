@@ -60,7 +60,7 @@ After you're finished please remove all the comments and instructions!
 
 # 📖 [Concert Planner] <a name="about-project"></a>
 
-**Responsive Concert Planner web app**
+**Library of Books**
 
 ## 🛠 Built With <a name="built-with"></a>
 
@@ -71,13 +71,10 @@ After you're finished please remove all the comments and instructions!
 - JS
 - Git/GitHub
 - node.js
-- Boostrap 5
 
 <!-- Features -->
 
 ### Key Features <a name="key-features"></a>
-
-- **Fully Responsive**
 - **Dynamic Content**
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
@@ -86,10 +83,10 @@ After you're finished please remove all the comments and instructions!
 
 ## 🚀 Live Demo <a name="live-demo"></a>
 
-- [Live Demo Link](https://shakir-hussain12.github.io/Capstone1)
+- [Live Demo Link]()
 
 ## Loom Video <a name="loom"></a>
-- [Video Link](https://www.loom.com/share/8706018a2539463e994174aaf2f63618)
+- [Video Link]()
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -111,17 +108,19 @@ In order to run this project you need:
 
 > Clone this repository to your desired folder:
 
-git clone git@github.com:Shakir-Hussain12/Capstone1.git
+git clone git@github.com:Shakir-Hussain12/AwesomeBooks.git
 
 <!-- AUTHORS -->
 
 ## 👥 Authors <a name="authors"></a>
-
 👤 **Shakir Hussain**
 
 - GitHub: [@Shakir-Hussain12](https://github.com/Shakir-Hussain12)
 - Twitter: [@S_Hussain_99](https://twitter.com/S_Hussain_99)
 - LinkedIn: [Shakir-Hussain](https://linkedin.com/in/shakir-hussain-2129a121b/)
+
+👤 **Ezekiel Udiomuno**
+- GitHub: [@Shakir-Hussain12](https://github.com/Ezzywealth)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -129,8 +128,7 @@ git clone git@github.com:Shakir-Hussain12/Capstone1.git
 
 ## 🔭 Future Features <a name="future-features"></a>
 
-- **Animations and Transitions to existing content**
-- **Schedule Page**
+- **Refactor code with classes**
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -156,8 +154,7 @@ If you like this project, you are welcomed to star and fork it. You can also sha
 
 ## 🙏 Acknowledgments <a name="acknowledgements"></a>
 
-I would like to thank Cindy Shin for her original design of **Creative Commons Global Summit 2015**, as it served as an inspiration for this project.
-- [Original Design](https://www.behance.net/gallery/29845175/CC-Global-Summit-2015)
+I would like to thank Microverse for their original design.
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
