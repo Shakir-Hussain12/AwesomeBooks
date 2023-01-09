@@ -1,20 +1,21 @@
 const btn = document.querySelector('#btn');
-const ti = document.querySelector('#title');
-const au = document.querySelector('#author');
+const title = document.querySelector('#title');
+const author = document.querySelector('#author');
 const book = document.querySelector('#content');
 const data = JSON.parse(localStorage.getItem('bookData')) || [];
 
-class Methods {
-  addItem = (val1, val2) => {
-    if (val1 && val2) {
+class NewBook {
+  addItem = (name, author) => {
+    if (name && author) {
       const item = {
-        title: val1,
-        author: val2,
+        name,
+        author,
       };
       data.push(item);
       localStorage.setItem('bookData', JSON.stringify(data));
     }
-  }
+    window.location.reload();
+  };
 
   deleteItem = (name, author) => {
     data.filter((val, ind, arr) => {
@@ -29,19 +30,31 @@ class Methods {
   };
 }
 
-const myMethod = new Methods();
-btn.addEventListener('click', () => {
-  myMethod.addItem(ti.value, au.value);
+const myMethod = new NewBook();
+btn.addEventListener('click', (e) => {
+  e.preventDefault();
+  myMethod.addItem(title.value, author.value);
 });
 
+const section = document.createElement('section');
+section.className = 'books_container';
+const h1 = document.createElement('h1');
+h1.innerText = 'All awesome books';
+h1.className = 'books_header';
+book.appendChild(h1);
 data.forEach((item) => {
-  const h1 = book.appendChild(document.createElement('h1'));
-  h1.innerText = item.title;
-  const h2 = book.appendChild(document.createElement('h2'));
-  h2.innerText = item.author;
+  const div = document.createElement('div');
+  div.className = 'book_item';
+  const h2 = document.createElement('h1');
+  h2.className = 'book_description';
+  h2.innerText = `${item.author} by ${item.name}`;
   const button = book.appendChild(document.createElement('button'));
   button.innerText = 'Remove';
-  book.appendChild(document.createElement('hr'));
+  button.className = 'book_button';
+  div.appendChild(h2);
+  div.appendChild(button);
+  section.appendChild(div);
+  book.appendChild(section);
   button.addEventListener('click', () => {
     myMethod.deleteItem(item.title, item.author);
   });
