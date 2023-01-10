@@ -8,15 +8,43 @@
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
+    <header>
+      <nav class="navbar">
+          <a class="nav-brand" href="">Awesome Books</a>
+          <ul class="nav-links">
+            <li><a href="#content">List</a></li>
+            <li><a href="#newform">Add new</a></li>
+            <li><a href="#contact">Contact</a></li>
+          </ul>
+      </nav>
+    </header>
+    <h1 class="date"></h1>
     <section id="content"></section>
-    <hr />
-    <form>
-      <h2>Add a new book</h2>
-      <input type="text" id="title" required placeholder="Title" />
-      <input type="text" id="author" required placeholder="Author" />
-      <div id="btn"><button>Add</button></div>
-    </form>
-
+    <section id="newform" class="inactive">
+      <form>
+        <h2>Add a new book</h2>
+        <input type="text" id="title" required placeholder="Title" />
+        <input type="text" id="author" required placeholder="Author" />
+        <div id="btn"><button>Add</button></div>
+      </form>
+    </section>
+    <section id="contact" class="inactive">
+      <div class="info">
+        <h2 class="head">Contact Information</h2>
+        <div class="supporting">
+          <h3>Do you have any questions or just want to say hello?</h3>
+          <h3>You can reach out!</h3>
+          <ul>
+            <li>Our Email: <a href="">mail@gmail.com</a></li>
+            <li>Phone Number: <a href="">+92123456789</a></li>
+            <li>Address: <address>Streetname 22, 84503 City, Country</address></li>
+          </ul>
+        </div>
+      </div>
+    </section>
+    <footer>
+      <h4>Copyright...</h4>
+    </footer>
     <script src="./script.js"></script>
   </body>
 </html>

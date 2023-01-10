@@ -2,8 +2,12 @@ const btn = document.querySelector('#btn');
 const title = document.querySelector('#title');
 const author = document.querySelector('#author');
 const book = document.querySelector('#content');
+const myDate = document.querySelector('.date');
 const data = JSON.parse(localStorage.getItem('bookData')) || [];
 
+let d = new Date();
+d = d.toString();
+myDate.innerText = d;
 class NewBook {
   addItem = (title, author) => {
     if (title && author) {
