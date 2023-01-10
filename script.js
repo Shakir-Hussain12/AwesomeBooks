@@ -6,7 +6,6 @@ const data = JSON.parse(localStorage.getItem('bookData')) || [];
 
 class NewBook {
   addItem = (title, author) => {
-    const id = new Date();
     if (title && author) {
       const item = {
         id: Date.now(),
