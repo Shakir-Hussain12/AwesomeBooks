@@ -2,8 +2,40 @@ const btn = document.querySelector('#btn');
 const title = document.querySelector('#title');
 const author = document.querySelector('#author');
 const book = document.querySelector('#content');
+const myDate = document.querySelector('.date');
 const data = JSON.parse(localStorage.getItem('bookData')) || [];
+const li = document.querySelectorAll('.nav-links a');
+const newForm = document.getElementById('newform');
+const contact = document.getElementById('contact');
 
+// functionality to display element on the page
+const handleDisplay = (element) => {
+  if (element.innerText === 'Add new') {
+    newForm.style.display = 'contents';
+  } else if (element.innerText === 'List') {
+    book.style.display = 'contents';
+  } else if (element.innerText === 'Contact') {
+    contact.style.display = 'contents';
+  }
+};
+
+// functionality to give the active class to the nav-link
+li.forEach((item) => {
+  item.addEventListener('click', (e) => {
+    li.forEach((item) => {
+      item.classList.remove('active');
+      newForm.style.display = 'none';
+      contact.style.display = 'none';
+      book.style.display = 'none';
+    });
+    e.target.classList.toggle('active');
+    handleDisplay(e.target);
+  });
+});
+
+let d = new Date().toUTCString();
+d = d.toString();
+myDate.innerText = d;
 class NewBook {
   addItem = (title, author) => {
     if (title && author) {
