@@ -1,6 +1,6 @@
 body {
   margin: 0;
-  padding: 0;
+  padding: 1rem 0;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -8,6 +8,7 @@ body {
   height: 100vh;
   box-sizing: border-box;
   overflow-x: hidden;
+  border: 1px solid black;
 }
 
 a {
@@ -17,37 +18,48 @@ a {
 }
 
 header {
-  min-width: 95%;
+  min-width: 98%;
   border: 1px solid;
   position: fixed;
   top: 0;
   z-index: 1;
+  margin-top: 0.5rem;
 }
 
 .date {
   font-size: 16px;
   text-align: right;
   display: block;
-  min-width: 95%;
+  min-width: 98%;
   position: absolute;
   top: 7vh;
-  padding: 0 2%;
-  padding-bottom: 10%;
+  margin: 0;
 }
 
 .navbar {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 0 2%;
+  padding: 0.5rem 2%;
 }
 
 .nav-links {
   display: flex;
-  justify-content: space-between;
   min-width: 30%;
-  padding: 0 3%;
+  gap: 1rem;
   list-style: none;
+  justify-content: flex-end;
+}
+
+.nav-links a:not(:first-child):before {
+  content: ' | ';
+}
+
+.active {
+  color: blue;
+}
+.nav-links a:focus {
+  color: blue;
 }
 
 .books_container {
@@ -55,6 +67,7 @@ header {
   display: flex;
   flex-direction: column;
   gap: 3px;
+  width: 95%;
 }
 
 .info {
@@ -76,6 +89,7 @@ header {
 
 #content {
   width: 90%;
+  /* margin-top: 5rem; */
 }
 
 .books_header {
@@ -145,10 +159,11 @@ address {
 }
 
 footer {
-  min-width: 95%;
+  min-width: 98%;
   border: 1px solid;
   position: absolute;
   bottom: 0;
+  margin-bottom: 0.5rem;
 }
 
 .inactive {
@@ -170,5 +185,9 @@ footer > h4 {
 @media screen and (min-width: 768px) {
   #content {
     width: 70%;
+  }
+
+  .books_container {
+    width: 50%;
   }
 }
