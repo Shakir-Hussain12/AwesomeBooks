@@ -1,4 +1,88 @@
 body {
   margin: 0;
   padding: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.books_container {
+  border: 1px solid black;
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+}
+
+#content {
+  width: 90%;
+}
+
+.books_header {
+  text-align: center;
+}
+
+.book_item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 1.5rem;
+  padding: 2px 10px;
+  font-size: 14px;
+}
+
+.book_item:nth-child(odd) {
+  background-color: rgb(232, 232, 245);
+}
+
+.book_description {
+  padding: 0;
+  margin: 0;
+}
+
+.book_button {
+  display: flex;
+  align-items: center;
+  height: inherit;
+  background-color: white;
+  color: black;
+  padding: 0 4px;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  align-items: center;
+}
+
+input {
+  padding: 5px;
+  border-radius: 5px;
+  width: 300px;
+}
+
+hr {
+  border: 1px solid black;
+  width: 5rem;
+  margin-top: 1rem;
+}
+
+#btn {
+  display: flex;
+  justify-content: flex-end;
+  width: 100%;
+  background: none;
+}
+
+button {
+  cursor: pointer;
+  background: none;
+}
+
+@media screen and (min-width: 768px) {
+  #content {
+    width: 70%;
+  }
 }

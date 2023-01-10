@@ -1,40 +1,70 @@
 const btn = document.querySelector('#btn');
-const ti = document.querySelector('#title');
-const au = document.querySelector('#author');
+const title = document.querySelector('#title');
+const author = document.querySelector('#author');
 const book = document.querySelector('#content');
 const data = JSON.parse(localStorage.getItem('bookData')) || [];
 
-btn.addEventListener('click', () => {
-  const item = {
-    title: ti.value,
-    author: au.value,
+class NewBook {
+  addItem = (title, author) => {
+    if (title && author) {
+      const item = {
+        id: Date.now(),
+        title,
+        author,
+      };
+      data.push(item);
+      localStorage.setItem('bookData', JSON.stringify(data));
+    }
+    window.location.reload();
   };
-  data.push(item);
-  localStorage.setItem('bookData', JSON.stringify(data));
+
+  deleteItem = (name, author) => {
+    data.filter((val, ind, arr) => {
+      if (val.title === name && val.author === author) {
+        arr.splice(ind, 1);
+        window.location.reload();
+        return true;
+      }
+      return false;
+    });
+    localStorage.setItem('bookData', JSON.stringify(data));
+  };
+}
+
+const myMethod = new NewBook();
+btn.addEventListener('click', (e) => {
+  e.preventDefault();
+  myMethod.addItem(title.value, author.value);
 });
 
-// functionality to delete item from the book array and local storage
-const deleteItem = (name, author) => {
-  data.filter((val, ind, arr) => {
-    if (val.title === name && val.author === author) {
-      arr.splice(ind, 1);
-      window.location.reload();
-      return true;
-    }
-    return false;
-  });
-  localStorage.setItem('bookData', JSON.stringify(data));
-};
-
+const section = document.createElement('section');
+section.className = 'books_container';
+const h1 = document.createElement('h1');
+h1.innerText = 'All awesome books';
+h1.className = 'books_header';
+if (data.length > 0) {
+  book.appendChild(h1);
+}
 data.forEach((item) => {
-  const h1 = book.appendChild(document.createElement('h1'));
-  h1.innerText = item.title;
-  const h2 = book.appendChild(document.createElement('h2'));
-  h2.innerText = item.author;
+  const div = document.createElement('div');
+  div.className = 'book_item';
+  const h2 = document.createElement('h1');
+  h2.className = 'book_description';
+  h2.innerText = `${item.title.charAt(0).toUpperCase()}${item.title
+    .split('')
+    .splice(1)
+    .join('')} by ${item.author.charAt(0).toUpperCase()}${item.author
+    .split('')
+    .splice(1)
+    .join('')}`;
   const button = book.appendChild(document.createElement('button'));
   button.innerText = 'Remove';
-  book.appendChild(document.createElement('hr'));
+  button.className = 'book_button';
+  div.appendChild(h2);
+  div.appendChild(button);
+  section.appendChild(div);
+  book.appendChild(section);
   button.addEventListener('click', () => {
-    deleteItem(item.title, item.author);
+    myMethod.deleteItem(item.title, item.author);
   });
 });

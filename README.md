@@ -22,15 +22,6 @@ REQUIRED SECTIONS:
 After you're finished please remove all the comments and instructions!
 -->
 
-<div align="center">
-
-  <img src="murple_logo.png" alt="logo" width="140"  height="auto" />
-  <br/>
-
-  <h3><b>Microverse README Template</b></h3>
-
-</div>
-
 <!-- TABLE OF CONTENTS -->
 
 # 📗 Table of Contents
@@ -75,6 +66,7 @@ After you're finished please remove all the comments and instructions!
 <!-- Features -->
 
 ### Key Features <a name="key-features"></a>
+
 - **Dynamic Content**
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
@@ -86,6 +78,7 @@ After you're finished please remove all the comments and instructions!
 - [Live Demo Link]()
 
 ## Loom Video <a name="loom"></a>
+
 - [Video Link]()
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
@@ -99,6 +92,7 @@ To get a local copy up and running, follow these steps.
 ### Prerequisites
 
 In order to run this project you need:
+
 - VSCode or any other IDE.
 - node.js(preferable).
 - browser to deploy.
@@ -113,6 +107,7 @@ git clone git@github.com:Shakir-Hussain12/AwesomeBooks.git
 <!-- AUTHORS -->
 
 ## 👥 Authors <a name="authors"></a>
+
 👤 **Shakir Hussain**
 
 - GitHub: [@Shakir-Hussain12](https://github.com/Shakir-Hussain12)
@@ -120,6 +115,7 @@ git clone git@github.com:Shakir-Hussain12/AwesomeBooks.git
 - LinkedIn: [Shakir-Hussain](https://linkedin.com/in/shakir-hussain-2129a121b/)
 
 👤 **Ezekiel Udiomuno**
+
 - GitHub: [@Shakir-Hussain12](https://github.com/Ezzywealth)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
@@ -146,7 +142,7 @@ Feel free to check the [issues page](../../issues/).
 
 ## ⭐️ Show your support <a name="support"></a>
 
-If you like this project, you are welcomed to star and fork it. You can also share your ideas for future features. 
+If you like this project, you are welcomed to star and fork it. You can also share your ideas for future features.
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -163,4 +159,5 @@ I would like to thank Microverse for their original design.
 ## 📝 License <a name="license"></a>
 
 This project is [MIT](./LICENSE.md) licensed.
+
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
