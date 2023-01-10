@@ -51,13 +51,14 @@ header {
   justify-content: flex-end;
 }
 
-.nav-links a:not(:first-child):before {
+.nav-links a:not(:first-child)::before {
   content: ' | ';
 }
 
 .active {
   color: blue;
 }
+
 .nav-links a:focus {
   color: blue;
 }
@@ -93,7 +94,6 @@ header {
   display: flex;
   flex-direction: column;
   align-items: center;
-  /* margin-top: 5rem; */
 }
 
 .books_header {
