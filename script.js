@@ -33,7 +33,7 @@ li.forEach((item) => {
   });
 });
 
-let d = new Date();
+let d = new Date().toUTCString();
 d = d.toString();
 myDate.innerText = d;
 class NewBook {
